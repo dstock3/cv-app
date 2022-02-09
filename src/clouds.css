@@ -1,0 +1,60 @@
+.cloud-container {
+    position: absolute;
+    left: -50%;
+    top: 0;
+    height: 100%;
+    width: 150%;
+    overflow: hidden;
+}
+
+#two {
+    left: -65%;
+    width: 165%;
+}
+
+#three {
+    left: -75%;
+    width: 175%;
+}
+
+#four {
+    left: -85%;
+    width: 185%;
+}
+
+@keyframes breezeOne {
+    100%  {left:115%}
+}
+
+@keyframes breezeTwo {
+    100%  {left:125%}
+}
+
+@keyframes breezeThree {
+    100%  {left:135%}
+}
+
+@keyframes breezeFour {
+    100%  {left:145%}
+}
+  
+#one > .cloud {
+    animation: breezeOne 85s infinite;
+    animation-iteration-count: infinite;
+}
+
+#two > .cloud {
+    animation: breezeTwo 145s infinite;
+    animation-iteration-count: infinite;
+}
+
+#three > .cloud {
+    animation: breezeThree 175s infinite;
+    animation-iteration-count: infinite;
+}
+
+#four > .cloud {
+    animation: breezeFour 250s infinite;
+    animation-iteration-count: infinite;
+}
+
