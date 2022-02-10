@@ -20,7 +20,7 @@ class ProfExp extends Component {
                     </ul>
                 </div>
 
-                { jobTwo ? (
+                { jobTwo ?
                     <div className={jobTwo}>
                         <h4 className="title">{newTitleTwo}</h4>
                         <p className="company">{newCompanyTwo}</p>
@@ -32,9 +32,9 @@ class ProfExp extends Component {
                             <li className="duties">{newDutiesTwoThree}</li>
                         </ul>
                     </div>
-                ) : (null)}
+                : null }
 
-                { jobThree ? (
+                { jobThree ?
                     <div className={jobThree}>
                         <h4 className="title">{newTitleThree}</h4>
                         <p className="company">{newCompanyThree}</p>
@@ -46,7 +46,7 @@ class ProfExp extends Component {
                             <li className="duties">{newDutiesThreeThree}</li>
                         </ul>
                     </div>
-                ) : (null)}
+                : null }
 
             </section>
         )

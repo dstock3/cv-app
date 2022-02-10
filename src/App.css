@@ -137,6 +137,7 @@ input {
 }
 
 .education-container {
+  width: 95%;
   display: flex;
   justify-content: space-between;
 }
@@ -314,7 +315,7 @@ label {
   width: 1px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   .cloud-container {
     display: none;
   }
