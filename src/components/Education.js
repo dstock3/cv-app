@@ -11,7 +11,7 @@ const Education = ({school, degree, major, year, honors, gpa}) => {
             { school ? <p className="school">{school}</p> : null }
             { degree ? <p className="degree">{degree}, ({year})</p> : null }
             { major ? <p className="major">{major}</p> : null }
-            { gpa ? <p className="honors">{honors}, GPA: {gpa}</p> : null }
+            { gpa ? <p className="honors">{honors ? <>{honors},</> : null} GPA: {gpa}</p> : null }
         </div>
 
     </div>
