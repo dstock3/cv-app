@@ -4,10 +4,10 @@ const Education = ({school, degree, year, honors, gpa}) => {
   return (
     <div className="education">
         <h3>Education</h3>
-        <p className="school">{school}</p>
-        <p className="degree">{degree}, ({year})</p>
-        <p className="honors">{honors}</p>
-        <p className="gpa">GPA: {gpa}</p>
+        { school ? <p className="school">{school}</p> : null }
+        { degree ? <p className="degree">{degree}, ({year})</p> : null }
+        { honors ? <p className="honors">{honors}</p> : null }
+        { gpa ? <p className="gpa">GPA: {gpa}</p> : null }
     </div>
   )
 }
