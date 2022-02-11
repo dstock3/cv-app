@@ -110,6 +110,23 @@ input {
   justify-content: space-between;
 }
 
+.job-container {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.duties {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.duties-item {
+  margin-bottom: 10px;
+}
+
 .city-input {
   width: 45%;
 }
@@ -137,6 +154,7 @@ input {
 }
 
 .education-container {
+  width: 95%;
   display: flex;
   justify-content: space-between;
 }
@@ -289,13 +307,28 @@ select {
   border-radius: 35%;
 }
 
+.education {
+  width: 100%;
+}
+
+.ed-subcontainer {
+  width: 40%;
+  margin-left: 5%;
+}
+
 .experience {
   width: 90%;
 }
 
+.exp-subcontainer > h4, p {
+  margin-right: 10px;
+  margin-block-start: .5rem;
+  margin-block-end: .5rem;
+}
+
 .exp-subcontainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
 }
 
@@ -314,19 +347,19 @@ label {
   width: 1px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   .cloud-container {
     display: none;
   }
 
   .form-container {
     position: relative;
-    width: 100%;
+    width: 100vw;
     left: unset;
   }
 
   .resume-form {
-    width: 90%;
+    width: 90vw;
   }
 
   input {
@@ -334,41 +367,46 @@ label {
   }
 
   .name-container {
-    width: 95%;
+    width: 85vw;
   }
 
   .address-container {
-    width: 95%;
+    width: 85vw;
   }
 
   .education-container {
-    width: 85%;
+    width: 85vw;
   }
 
   .education-subcontainer-left {
-    width: 50%;
+    width: 45vw;
   }
 
+  .education-subcontainer-right {
+    width: 35vw;
+  }
+
+
   .experience-container {
-    width: 85%;
+    width: 85vw;
     align-items: unset;
   }
 
   .experience-subcontainer {
-    width: 100%;
+    width: 85vw;
   }
 
   .experience-subcontainer > div {
-    width: 40%;
+    width: 35vw;
   }
 
   #add-prof-info {
-    width: 75%;
+    width: 33vw;
     margin-top: 15px;
   }
 
   .resume-container {
-    width: 96%;
+    width: 92vw;
   }
 
   .resume {
@@ -379,7 +417,7 @@ label {
   .preview-head-container {
     margin-top: 15px;
     margin-bottom: 15px;
-    width: 50%;
+    width: 40vw;
   }
 
   .general-info {
