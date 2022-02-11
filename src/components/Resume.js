@@ -17,7 +17,7 @@ const Resume = ({jobOne, jobTwo, jobThree, firstName, lastName, address, city, s
     })
 
     return (
-        <section className="resume">
+        <div className="resume">
             <h2 className="name">{firstName} {lastName}</h2>
 
             <Divider />
@@ -27,9 +27,7 @@ const Resume = ({jobOne, jobTwo, jobThree, firstName, lastName, address, city, s
             <ProfExp jobOne={jobOne} company={company} title={title} dutiesOne={dutiesOne} dutiesTwo={dutiesTwo} dutiesThree={dutiesThree} date={date} jobTwo={jobTwo} jobThree={jobThree} newCompanyTwo={newCompanyTwo} newTitleTwo={newTitleTwo} newDutiesTwoOne={newDutiesTwoOne} newDutiesTwoTwo={newDutiesTwoTwo} newDutiesTwoThree={newDutiesTwoThree} newDateTwo={newDateTwo} newCompanyThree={newCompanyThree} newTitleThree={newTitleThree} newDutiesThreeOne={newDutiesThreeOne} newDutiesThreeTwo={newDutiesThreeTwo} newDutiesThreeThree={newDutiesThreeThree} newDateThree={newDateThree}/>
             
             <Education school={school} major={major} degree={degree} year={year} honors={honors} gpa={gpa} />
-
-            <Divider />
-        </section>
+        </div>
     )
 }
 

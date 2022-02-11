@@ -60,8 +60,8 @@ export class Form extends Component {
             newCompany: 'Google',
             newTitle: 'Business Manager',
             newDutiesOne: 'Manage operations and employees',
-            newDutiesTwo: 'Manage operations and employees',
-            newDutiesThree: 'Manage operations and employees',
+            newDutiesTwo: 'Increased employee retention by optimizing workplace satisfaction',
+            newDutiesThree: 'Implement company policies to ensure that compliance with labor laws',
             newDate: '2017-Present',
 
             jobClickCount: 1,

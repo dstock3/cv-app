@@ -110,6 +110,23 @@ input {
   justify-content: space-between;
 }
 
+.job-container {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.duties {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.duties-item {
+  margin-bottom: 10px;
+}
+
 .city-input {
   width: 45%;
 }
@@ -290,13 +307,28 @@ select {
   border-radius: 35%;
 }
 
+.education {
+  width: 100%;
+}
+
+.ed-subcontainer {
+  width: 40%;
+  margin-left: 5%;
+}
+
 .experience {
   width: 90%;
 }
 
+.exp-subcontainer > h4, p {
+  margin-right: 10px;
+  margin-block-start: .5rem;
+  margin-block-end: .5rem;
+}
+
 .exp-subcontainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
 }
 

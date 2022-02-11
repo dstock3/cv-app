@@ -1,4 +1,5 @@
 import React from 'react'
+import Divider from './Divider'
 import Job from './Job'
 
 const ProfExp = ({jobOne, jobTwo, jobThree, company, title, dutiesOne, dutiesTwo, dutiesThree, date, newCompanyTwo, newTitleTwo, newDutiesTwoOne, newDutiesTwoTwo, newDutiesTwoThree, newDateTwo, newCompanyThree, newTitleThree, newDutiesThreeOne, newDutiesThreeTwo, newDutiesThreeThree, newDateThree}) => {
@@ -6,6 +7,7 @@ const ProfExp = ({jobOne, jobTwo, jobThree, company, title, dutiesOne, dutiesTwo
     <div className="experience">
 
         <h3>Work Experience</h3>
+        <Divider />
 
         <Job job={jobOne} title={title} company={company} date={date} dutiesOne={dutiesOne} dutiesTwo={dutiesTwo} dutiesThree={dutiesThree} />
 
