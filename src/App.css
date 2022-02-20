@@ -79,7 +79,6 @@ input {
   color: #000000;
   margin: 2% 0;
   font-size: 1.25em;
-  border-radius: 5%;
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -407,11 +406,13 @@ label {
 
   .resume-container {
     width: 92vw;
+    height: 90vh;
+    margin-bottom: 25px;
   }
 
   .resume {
     margin: unset;
-    min-height: 550px;
+    min-height: 85%;
   }
 
   .preview-head-container {
@@ -420,8 +421,11 @@ label {
     width: 40vw;
   }
 
-  .general-info {
-    left: 60%;
+  @media only screen and (max-width: 850px) {
+    .general-info {
+      left: 60%;
+    }
+  
   }
 
 

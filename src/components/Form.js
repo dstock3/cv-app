@@ -385,7 +385,7 @@ export class Form extends Component {
         const {firstName, lastName, address, city, state, zip, email, phone, firstNamePlaceholder, genClass, lastNamePlaceholder, addressPlaceholder, zipPlaceholder, cityPlaceholder, emailPlaceholder, phonePlaceholder, school, degree, honors, gpa, year, edClass, schoolPlaceholder, degreePlaceholder, yearPlaceholder, gpaPlaceholder, profClass, compPlaceholder, titlePlaceholder, datePlaceholder, company, title, dutiesOne, dutiesTwo, dutiesThree, date, newFirstName, newLastName, newAddress, newCity, newState, newZip, newEmail, newPhone, newSchool, newDegree, newMajor, newHonors, newGPA, newYear, newCompany, newTitle, newDutiesOne, newDutiesTwo, newDutiesThree, newDate, newCompanyTwo, newTitleTwo, newDutiesTwoOne, newDutiesTwoTwo, newDutiesTwoThree, newDateTwo, newCompanyThree, newTitleThree, newDutiesThreeOne, newDutiesThreeTwo, newDutiesThreeThree, newDateThree, jobOne, jobTwo, jobThree} = this.state
 
         return (
-            <div className="section-container">
+            <main className="section-container">
                 <section className="form-container">
                     <h1>Resume Builder</h1>
                     <form className="resume-form" onSubmit={this.handleSubmit}>
@@ -499,7 +499,7 @@ export class Form extends Component {
                     
                     <Resume firstName={newFirstName} lastName={newLastName} address={newAddress} city={newCity + ","} state={newState} zip={newZip} email={newEmail} phone={newPhone} school={newSchool} degree={newDegree} honors={newHonors} major={newMajor} gpa={newGPA} year={newYear} company={newCompany} title={newTitle} dutiesOne={newDutiesOne} dutiesTwo={newDutiesTwo} dutiesThree={newDutiesThree} date={newDate} newCompanyTwo={newCompanyTwo} newTitleTwo={newTitleTwo} newDutiesTwoOne={newDutiesTwoOne} newDutiesTwoTwo={newDutiesTwoTwo} newDutiesTwoThree={newDutiesTwoThree} newDateTwo={newDateTwo} newCompanyThree={newCompanyThree} newTitleThree={newTitleThree} newDutiesThreeOne={newDutiesThreeOne} newDutiesThreeTwo={newDutiesThreeTwo} newDutiesThreeThree={newDutiesThreeThree} newDateThree={newDateThree} jobOne={jobOne} jobTwo={jobTwo} jobThree={jobThree}/>
                 </section>
-            </div>
+            </main>
         )
     }
 }
