@@ -81,6 +81,8 @@ export class Form extends Component {
             newDutiesThreeTwo: '',
             newDutiesThreeThree: '',
             newDateThree: '',
+
+            submitCheck: false,
         }
     }
     
@@ -273,6 +275,7 @@ export class Form extends Component {
                 newDutiesTwo: dutiesTwo,
                 newDutiesThree: dutiesThree,
                 newDate: date,
+                
             })
         } else if (jobClickCount === 2) {
             this.setState({
@@ -299,6 +302,10 @@ export class Form extends Component {
 
     handleSubmit = (event) => {
         const {firstName, lastName, address, city, state, zip, email, phone, genClass, edClass, school, degree, year, honors, gpa, profClass, company, title, dutiesOne, dutiesTwo, dutiesThree, date} = this.state
+
+        this.setState({ 
+            submitCheck: true
+        })
 
         if (!genClass) {
             this.setState({
@@ -486,8 +493,10 @@ export class Form extends Component {
                         </fieldset>
                         
                         <div className="button-container">
-                            <button className="submit" type="submit">Submit</button>
+                            <button className="submit" type="submit" onClick={this.handleSubmit}>Submit</button>
                             <button className="remove" onClick={this.removeInfo}>Clear</button>
+                            {this.submitCheck ?
+                                <button className="Download PDF">Download PDF</button> : null }
                         </div>
                     </form>   
                 </section>
