@@ -493,7 +493,7 @@ export class Form extends Component {
                         </fieldset>
                         
                         <div className="button-container">
-                            <button className="submit" type="submit" onClick={this.handleSubmit}>Submit</button>
+                            <button className="submit" type="submit">Submit</button>
                             <button className="remove" onClick={this.removeInfo}>Clear</button>
                             {this.submitCheck ?
                                 <button className="Download PDF">Download PDF</button> : null }
