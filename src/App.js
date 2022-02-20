@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Form from './components/Form';
 import Cloud from './components/Cloud';
+import Main from './components/Main';
 
 function App() {
   
@@ -12,8 +13,11 @@ function App() {
       <Cloud cloudSet="three"/>
       <Cloud cloudSet="four"/>
 
-      <Form />
-      
+      <Main />
+
+      {/*
+        <Form />
+      */}
     </div>
   );
 }
