@@ -18,22 +18,12 @@ const GenForm = ({genInfo, setGenInfo}) => {
     
     useEffect(()=> {
         inputRef.current.focus()
+        console.log(genInfo)
     })
 
-    const changeHandler = (property, event) => {
-        for (let prop in genInfo) {
-            console.log(event.target.value)
-            /*
-            if (prop === property) {
-                genInfo[prop]
-                
-
-            }*/
-        }
-    }
-
     const addGenInfo = () => {
-        if (firstName && lastName && address && city && state && zip && email && phone) {
+        if (genInfo.firstName && genInfo.lastName && genInfo.address && genInfo.city && genInfo.state && genInfo.zip && genInfo.email && genInfo.phone) {
+            console.log(genInfo)
             /*
             setGenInfo({
                 newFirstName: firstName,
@@ -48,13 +38,13 @@ const GenForm = ({genInfo, setGenInfo}) => {
         } else {
             setGenClass("error")
             setPlaceholders({
-                firstNamePlaceholder: "Required Field", 
-                lastNamePlaceholder: "Required Field", 
-                addressPlaceholder: "Required Field", 
-                zipPlaceholder: "Required Field", 
-                cityPlaceholder: "Required Field", 
-                emailPlaceholder: "Required Field", 
-                phonePlaceholder: "Required Field", 
+                firstName: "Required Field", 
+                lastName: "Required Field", 
+                address: "Required Field", 
+                zip: "Required Field", 
+                city: "Required Field", 
+                email: "Required Field", 
+                phone: "Required Field", 
             })
         }
 
@@ -68,34 +58,50 @@ const GenForm = ({genInfo, setGenInfo}) => {
 
             <div className="name-container">
                 <label htmlFor="firstname">First Name:</label>
-                <input ref={inputRef} className={"first-name-input " + genClass} type="text" value={genInfo.firstName} id="firstname" placeholder={placeholders.firstName} onChange={(e) => changeHandler("firstName", e)}/>
+                <input ref={inputRef} className={"first-name-input " + genClass} type="text" value={genInfo.firstName} id="firstname" placeholder={placeholders.firstName} onChange={(e) =>
+                    setGenInfo({...genInfo, firstName: e.target.value})  
+                }/>
 
                 <label htmlFor="lastname">Last Name:</label>
-                <input className={"last-name-input " + genClass} type="text" value={genInfo.lastName} id="lastname" placeholder={placeholders.lastName} onChange={(e) => changeHandler("lastName", e)}/>
+                <input className={"last-name-input " + genClass} type="text" value={genInfo.lastName} id="lastname" placeholder={placeholders.lastName} onChange={(e) =>
+                    setGenInfo({...genInfo, lastName: e.target.value})  
+                }/>
             </div>
 
             <div className="address-container">
                 <label htmlFor="address">Address:</label>
-                <input className={"address-input " + genClass} type="text" value={genInfo.address} id="address" placeholder={placeholders.address} onChange={(e) => changeHandler("address", e)} />
+                <input className={"address-input " + genClass} type="text" value={genInfo.address} id="address" placeholder={placeholders.address} onChange={(e) =>
+                    setGenInfo({...genInfo, address: e.target.value})  
+                } />
 
                 <div className="address-subcontainer">
                     <label htmlFor="city">City:</label>
-                    <input className={"city-input " + genClass} type="text" value={genInfo.city} id="city" placeholder={placeholders.city} onChange={(e) => changeHandler("city", e)} />
+                    <input className={"city-input " + genClass} type="text" value={genInfo.city} id="city" placeholder={placeholders.city} onChange={(e) =>
+                        setGenInfo({...genInfo, city: e.target.value})  
+                    } />
                     
                     <label htmlFor="state">State:</label>
-                    <select className="state-select" type="text" value={genInfo.state} name="state" onChange={(e) => changeHandler("state", e)}>
+                    <select className="state-select" type="text" value={genInfo.state} name="state" onChange={(e) =>
+                        setGenInfo({...genInfo, state: e.target.value})  
+                    }>
                         <StateOptions />
                     </select>
 
                     <label htmlFor="zip">Zip Code:</label>
-                    <input className={"zip-input " + genClass} type="text" value={genInfo.zip} id="zip" placeholder={placeholders.zip} onChange={(e) => changeHandler("zip", e)} />
+                    <input className={"zip-input " + genClass} type="text" value={genInfo.zip} id="zip" placeholder={placeholders.zip} onChange={(e) =>
+                        setGenInfo({...genInfo, zip: e.target.value})  
+                    } />
                 </div>
                 <div className="contact-container">
                     <label htmlFor="email">E-Mail Address:</label>
-                    <input className={"email-input " + genClass}type="text" value={genInfo.email} id="email" placeholder={placeholders.email} onChange={(e) => changeHandler("email", e)}/>
+                    <input className={"email-input " + genClass}type="text" value={genInfo.email} id="email" placeholder={placeholders.email} onChange={(e) =>
+                        setGenInfo({...genInfo, email: e.target.value})  
+                    }/>
 
                     <label htmlFor="phone">Phone Number:</label>
-                    <input className={"phone-input " + genClass} type="text" value={genInfo.phone} id="phone" placeholder={placeholders.phone} onChange={(e) => changeHandler("phone", e)} />
+                    <input className={"phone-input " + genClass} type="text" value={genInfo.phone} id="phone" placeholder={placeholders.phone} onChange={(e) =>
+                        setGenInfo({...genInfo, phone: e.target.value})  
+                    } />
                 </div>
             </div>
 

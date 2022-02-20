@@ -9,7 +9,7 @@ const Main = () => {
             <section className="form-container">
                 <h1>Resume Builder</h1>
                 <form className="resume-form">
-                    <GenForm genInfo={genInfo, setGenInfo}/>
+                    <GenForm genInfo={genInfo} setGenInfo={setGenInfo}/>
 
 
                 </form>
