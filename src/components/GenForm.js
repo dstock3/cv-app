@@ -18,7 +18,6 @@ const GenForm = ({genInfo, setGenInfo}) => {
     
     useEffect(()=> {
         inputRef.current.focus()
-        console.log(genInfo)
     })
 
     const addGenInfo = () => {

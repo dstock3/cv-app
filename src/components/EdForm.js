@@ -1,0 +1,38 @@
+import React, { useState, useRef, useEffect } from 'react'
+
+const EdForm = () => {
+    const [edClass, setEdClass] = useState('')
+
+    const addEdInfo = () => {
+
+    }
+    
+    return (
+        <fieldset>
+            <legend>Education</legend>
+            <div className="education-container">
+                <div className="education-subcontainer-left">
+                    <label htmlFor="school">School:</label>
+                    <input className={edClass} type="text" value={school} name="school" placeholder={schoolPlaceholder} onChange={this.changeSchoolHandler} />
+
+                    <label htmlFor="degree">Degree:</label>
+                    <input className={edClass} type="text" value={degree} name="degree" placeholder={degreePlaceholder} onChange={this.changeDegreeHandler} />
+
+                    <label htmlFor="year">Year of Completion:</label>
+                    <input className={edClass} type="text" value={year} name="year" placeholder={yearPlaceholder} onChange={this.changeYearHandler} />
+                </div>
+                <div className="education-subcontainer-right">
+                    <label htmlFor="honors">Honors:</label>
+                    <input type="text" value={honors} name="honors" placeholder='Honors' onChange={this.changeHonorsHandler} />
+
+                    <label htmlFor="gpa">GPA:</label>
+                    <input className={edClass} type="text" value={gpa} name="gpa" placeholder={gpaPlaceholder} onChange={this.changeGPAHandler} />
+                </div>
+            </div>
+
+            <button className="add-info-button" id="add-ed-info" onClick={this.addEdInfo}>+</button>
+        </fieldset>
+    )
+}
+
+export default EdForm
