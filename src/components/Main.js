@@ -8,7 +8,7 @@ const Main = () => {
 
     const [edInfo, setEdInfo] = useState({school: '', degree: '', year: '', honors: '', gpa: ''})
 
-    const [profInfo, setProfInfo] = useState({company: '', title: '',duties: '', date: ''})
+    const [profInfo, setProfInfo] = useState({company: '', title: '',dutiesOne: '', dutiesTwo: '', dutiesThree: '', date: ''})
 
     return (
         <main className="section-container">
@@ -16,16 +16,13 @@ const Main = () => {
                 <h1>Resume Builder</h1>
 
                 <form className="resume-form">
-
                     <GenForm genInfo={genInfo} setGenInfo={setGenInfo}/>
 
                     <EdForm edInfo={edInfo} setEdInfo={setEdInfo} />
 
                     <ProfForm profInfo={profInfo} setProfInfo={setProfInfo} />
-
                 </form>
             </section>
-
         </main>
     )
 }
