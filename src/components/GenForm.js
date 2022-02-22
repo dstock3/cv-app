@@ -104,7 +104,7 @@ const GenForm = ({genInfo, setGenInfo}) => {
                 </div>
             </div>
 
-            <button className="add-info-button" id="add-general-info" onClick={() => addGenInfo}>+</button>
+            <button className="add-info-button" id="add-general-info" onClick={addGenInfo}>+</button>
         </fieldset>
     )
 }

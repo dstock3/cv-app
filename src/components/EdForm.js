@@ -48,7 +48,7 @@ const EdForm = ({edInfo, setEdInfo}) => {
                 </div>
             </div>
 
-            <button className="add-info-button" id="add-ed-info" onClick={()=> addEdInfo}>+</button>
+            <button className="add-info-button" id="add-ed-info" onClick={addEdInfo}>+</button>
         </fieldset>
     )
 }
