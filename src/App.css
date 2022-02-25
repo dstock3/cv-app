@@ -16,7 +16,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
 }
 
 .gen-info {
@@ -34,7 +34,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 23%;
+  width: 27vw;
   margin: 2% 7%;
   background-color: #005da8;
   border: 3px solid #005da8;
@@ -110,6 +110,7 @@ input {
 }
 
 .job-container {
+  width: 90%;
   margin-top: 15px;
   display: flex;
   flex-direction: column;
@@ -316,7 +317,7 @@ select {
 }
 
 .experience {
-  width: 90%;
+  width: 100%;
 }
 
 .exp-subcontainer > h4, p {
@@ -346,7 +347,7 @@ label {
   width: 1px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1300px) {
   .cloud-container {
     display: none;
   }
