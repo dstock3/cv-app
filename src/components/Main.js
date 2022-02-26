@@ -15,6 +15,8 @@ const Main = () => {
         favIcon.href = Favicon
     })
 
+    const [isSubmitted, setIsSubmitted] = useState(false)
+
     const [genInfo, setGenInfo] = useState({firstName: '', lastName: '', address: '', zip: '', city: '', state: '', email: '', phone: '', genClass: ''})
 
     const [edInfo, setEdInfo] = useState({school: '', degree: '', year: '', honors: '', gpa: ''})
@@ -26,7 +28,7 @@ const Main = () => {
     }
 
     const handleSubmit = () => {
-
+        setIsSubmitted(true)
     }
 
     return (
@@ -52,7 +54,7 @@ const Main = () => {
                     <h2 className="preview">Preview</h2>
                 </div>
                 
-                <Resume genInfo={genInfo} edInfo={edInfo} profInfo={profInfo}/>
+                <Resume genInfo={genInfo} edInfo={edInfo} profInfo={profInfo} isSubmitted={isSubmitted} />
             </section>
         </main>
     )
