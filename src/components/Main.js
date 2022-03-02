@@ -25,9 +25,11 @@ const Main = () => {
 
     const removeInfo = () => {
         setGenInfo({firstName: '', lastName: '', address: '', zip: '', city: '', state: '', email: '', phone: '', genClass: ''})
+        setIsSubmitted(true)
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = e => {
+        e.preventDefault()
         setIsSubmitted(true)
     }
 

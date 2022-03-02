@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import StateOptions from './StateOptions';
 
 const GenForm = ({genInfo, setGenInfo}) => {
@@ -12,12 +12,6 @@ const GenForm = ({genInfo, setGenInfo}) => {
         city: "City",
         email: "E-Mail Address",
         phone: "Phone Number",
-    })
-
-    const inputRef = useRef()
-    
-    useEffect(()=> {
-        inputRef.current.focus()
     })
 
     const addGenInfo = () => {
@@ -57,7 +51,7 @@ const GenForm = ({genInfo, setGenInfo}) => {
 
             <div className="name-container">
                 <label htmlFor="firstname">First Name:</label>
-                <input ref={inputRef} className={"first-name-input " + genClass} type="text" value={genInfo.firstName} id="firstname" placeholder={placeholders.firstName} onChange={e =>
+                <input className={"first-name-input " + genClass} type="text" value={genInfo.firstName} id="firstname" placeholder={placeholders.firstName} onChange={e =>
                     setGenInfo({...genInfo, firstName: e.target.value})  
                 }/>
 

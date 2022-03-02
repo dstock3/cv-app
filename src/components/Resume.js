@@ -15,7 +15,7 @@ const Resume = ({genInfo, edInfo, profInfo, isSubmitted}) => {
         email: 'SallySmith@gmail.com',
         phone: '(777) 809-2222',
         school: 'University of Iowa',
-        major: 'Finance',
+        major: 'Bachelor of Arts in Finance',
         honors: 'Magna Cum Laude',
         gpa: '3.7',
         year: '2012',
@@ -25,7 +25,6 @@ const Resume = ({genInfo, edInfo, profInfo, isSubmitted}) => {
         dutiesTwo: 'Increased employee retention by optimizing workplace satisfaction',
         dutiesThree: 'Implement company policies to ensure that compliance with labor laws',
         date: '2017-Present',
-
     })
 
     if (isSubmitted) {
@@ -49,7 +48,7 @@ const Resume = ({genInfo, edInfo, profInfo, isSubmitted}) => {
     
                 <Divider />
     
-                <GenInfo address={placeholder.address} city={placeholder.city} state={placeholder.state} zip={placeholder.zip} email={genInfo.email} phone={genInfo.phone} />
+                <GenInfo address={placeholder.address} city={placeholder.city} state={placeholder.state} zip={placeholder.zip} email={placeholder.email} phone={placeholder.phone} />
     
                 <ProfExp jobOne={placeholder.jobOne} company={placeholder.company} title={placeholder.title} dutiesOne={placeholder.dutiesOne} dutiesTwo={placeholder.dutiesTwo} dutiesThree={placeholder.dutiesThree} date={placeholder.date}/>
     
