@@ -11,7 +11,16 @@ const ProfForm = ({profInfo, setProfInfo}) => {
     })
 
     const addProfInfo = () => {
-
+        if (profInfo.company && profInfo.title && profInfo.date && profInfo.dutiesOne && profInfo.dutiesTwo && profInfo.dutiesThree) {
+            setProfInfo({...profInfo, isValid: true})
+        } else {
+            setPlaceholders({...placeholders,
+                company: "Required Field",
+                title: "Required Field",
+                date: "Required Field",
+                duties: "Required Field"
+            })
+        }
     }
 
     return (

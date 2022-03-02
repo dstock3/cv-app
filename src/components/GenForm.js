@@ -16,18 +16,7 @@ const GenForm = ({genInfo, setGenInfo}) => {
 
     const addGenInfo = () => {
         if (genInfo.firstName && genInfo.lastName && genInfo.address && genInfo.city && genInfo.state && genInfo.zip && genInfo.email && genInfo.phone) {
-            console.log(genInfo)
-            /*
-            setGenInfo({
-                newFirstName: firstName,
-                newLastName: lastName,
-                newAddress: address,
-                newCity: city,
-                newState: state,
-                newZip: zip,
-                newEmail: email,
-                newPhone: phone,
-            })*/
+            setGenInfo({...genInfo, isValid: true})
         } else {
             setGenClass("error")
             setPlaceholders({

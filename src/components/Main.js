@@ -17,11 +17,11 @@ const Main = () => {
 
     const [isSubmitted, setIsSubmitted] = useState(false)
 
-    const [genInfo, setGenInfo] = useState({firstName: '', lastName: '', address: '', zip: '', city: '', state: '', email: '', phone: '', genClass: ''})
+    const [genInfo, setGenInfo] = useState({firstName: '', lastName: '', address: '', zip: '', city: '', state: '', email: '', phone: '', genClass: '', isValid: false})
 
-    const [edInfo, setEdInfo] = useState({school: '', degree: '', year: '', honors: '', gpa: ''})
+    const [edInfo, setEdInfo] = useState({school: '', degree: '', year: '', honors: '', gpa: '', isValid: false})
 
-    const [profInfo, setProfInfo] = useState({company: '', title: '',dutiesOne: '', dutiesTwo: '', dutiesThree: '', date: ''})
+    const [profInfo, setProfInfo] = useState({company: '', title: '',dutiesOne: '', dutiesTwo: '', dutiesThree: '', date: '', isValid: false})
 
     const removeInfo = () => {
         setGenInfo({firstName: '', lastName: '', address: '', zip: '', city: '', state: '', email: '', phone: '', genClass: ''})
@@ -30,7 +30,11 @@ const Main = () => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        setIsSubmitted(true)
+        if (genInfo.isValid && edInfo.isValid && profInfo.isValid) {
+            setIsSubmitted(true)
+        } else {
+
+        }
     }
 
     return (

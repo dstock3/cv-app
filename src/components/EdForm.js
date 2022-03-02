@@ -13,7 +13,7 @@ const EdForm = ({edInfo, setEdInfo}) => {
 
     const addEdInfo = () => {
         if (edInfo.school && edInfo.degree && edInfo.year) {
-            console.log(edInfo)
+            setEdInfo({...edInfo, isValid: true})
         } else {
             setEdClass("error")
             setPlaceholders({
